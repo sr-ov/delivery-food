@@ -1,14 +1,13 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 import { CSSTransition } from 'react-transition-group'
 
 import styles from './Fade.module.css'
 
 interface FadeProps {
-	children: ReactNode
 	start: boolean
 }
 
-const Fade = ({ children, start }: FadeProps) => {
+const Fade = ({ children, start }: PropsWithChildren<FadeProps>) => {
 	return (
 		<CSSTransition
 			in={start}
