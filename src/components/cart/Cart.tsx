@@ -30,11 +30,11 @@ function Cart() {
 						<CartHeader onCloseModal={toggleCart} />
 						{cartItems.length > 0 ? (
 							<>
-								<CartBody changeCount={() => {}} cartItems={cartItems} />
+								<CartBody cartItems={cartItems} />
 								<CartFooter onClearCart={clearCart} totalPrice={totalPrice} />
 							</>
 						) : (
-							<div className="">В корзине пусто</div>
+							<div>В корзине пусто</div>
 						)}
 					</div>
 				</div>

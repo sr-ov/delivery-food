@@ -6,7 +6,6 @@ import {
 	GetStaticPropsResult,
 	NextPage,
 } from 'next'
-import cn from 'classnames'
 import { ParsedUrlQuery } from 'querystring'
 
 import { MenuCards, MenuHeader } from '../components'
@@ -19,7 +18,7 @@ interface MenuPageProps extends IRestaurant {}
 const Menu: NextPage<MenuPageProps> = ({ headerInfo, menu }) => {
 	return (
 		<main className="container">
-			<section className={cn('')}>
+			<section>
 				<MenuHeader {...headerInfo} />
 				<MenuCards data={menu} />
 			</section>
